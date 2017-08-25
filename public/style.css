@@ -1,3 +1,9 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+ 
+body {
+     font-family: 'Noto Sans JP', sans-serif;
+     font-size: 100%;
+}
 h1{
 font-size:40px;
 color: white;
@@ -9,12 +15,41 @@ body    {
 
 
 .navbar-brand {
-    font-size:40px;
-    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 300%;
+    font-weight:200;
 }
 
-
-
-#NavbarContent {
-   
+/*ナビバーのメニューフォント*/
+#my-navbar {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 160%;
+    font-weight:100;
+    
 }
+
+header.jumbotron {
+      background: url("img/IMG_0253.JPG");
+      background-position: center center;
+      background-size: cover;
+      color: #fff;
+    }
+    
+    header .container {
+      margin-top: 13%;
+    }
+    
+    header .midashi-btn {
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 0;
+    }
+    
+    header .midashi-btn:hover {
+      color: #0089ff;
+      border-color: #0089ff;
+    }
+    
+    .navbar-form {
+      padding-right: 30px;
+    }
