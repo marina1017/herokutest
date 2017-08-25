@@ -4,9 +4,6 @@ $(function(){
   });
 });
 
-$(function(){
-  $("#head").load("tab1.html");
-});
 //ロードが発生した際に、実行したい処理を関数(generateNavbar)として指定します。
 $(function() {
   $("#MyNavbar").load("menu.html", generateNavbar);
