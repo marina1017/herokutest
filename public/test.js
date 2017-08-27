@@ -35,8 +35,8 @@ function generateNavbar(eventObject) {
   var activeNum = $('#Navbar').data("active");
   
   content[0] = new NavbarContent(null, 'あそびかた', 'index.html');
-  content[1] = new NavbarContent(null, '設定', 'index2.html');
-  content[2] = new NavbarContent(null, '特技', 'index3.html');
+  content[1] = new NavbarContent(null, '特技', 'index2.html');
+  content[2] = new NavbarContent(null, '設定', 'index3.html');
   
   var i = 0;
   for(i in content) {
