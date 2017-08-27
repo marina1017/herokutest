@@ -1,0 +1,25 @@
+<!--.navbarでナビゲーションバーを使用。.navbar-inverseを指定すると黒背景ベースのメニュー-->
+<nav class="navbar navbar-inverse">
+  <!-- モバイルデバイスビューの定義 -->
+<div class="container-fluid">
+<!--ナビゲーションバーのヘッダーを設定-->
+  <div class="navbar-header">
+<!--スマホサイズ時のハンバーガーメニューを設定　buttonから標準でスマホサイズの時に表示するハンバーガーメニューボタン　data-targetで11行目からの表示するリンクメニューの任意のIDやクラスの指定-->
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+<!--音声ブラウザにメニューがあることを伝えています-->
+    <span class="sr-only">Toggle Navigation</span>
+<!--ハンバーガーメニューの三本線を設定-->
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a href="#" class="navbar-brand">シノビガミTRPG</a>
+  </div>
+ <!--ハンバーガーメニュー内に折り畳まれる部分の設定 ウインドウサイズによって表示、表示が切り替わるように.collapse、.navbar-collapse-->
+  <div class="collapse navbar-collapse" id="my-navbar">
+<!--      リストタグに.navでナビゲーション.navbar-navでナビゲーションバーを使用-->
+   <ul class="nav navbar-nav" id="NavbarContent">
+   </ul>
+  </div>
+</div>
+</nav>
