@@ -2,16 +2,21 @@
  
 body {
      font-family: 'Noto Sans JP', sans-serif;
-     font-size: 100%;
+     font-size: 120%;
+    　font-weight:200;
 }
 h1{
 font-size:40px;
 color: white;
 background-color: #000000;  
 }
-body    {  
-    
-}  
+table {
+width: 80%;
+table-layout: fixed;
+}
+table th.title {
+   width: 1.8em;   /* セルの横幅：1.8文字分 */
+}
 
 
 .navbar-brand {
