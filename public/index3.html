@@ -16,24 +16,762 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-      <!--bootstrap定義 -->
-          <!-- Navbar　data-activeを指定activeで指定されたメニュー項目をアクティブにする -->
-          <div class="row" id="MyNavbar" data-active="0">
+    <!--ナビゲート定義はじまり -->
+    <!-- Navbar　data-activeを指定activeで指定されたメニュー項目をアクティブにする -->
+    <div class="row" id="MyNavbar" data-active="0"></div>
+    <!--ナビゲート定義おわり -->
+    <!--パネル定義始まり -->
+    <!--一覧始まり -->
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc1">汎用忍法 </a>
+          </h4>
+        </div>
+        <div class="panel-body">汎用忍法は所属する流派にかかわらずどのキャラクターでも習得できます</div>
+        <div id="acc1" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc11">攻撃忍法 </a>
+                </h4>
+              </div>
+              <div id="acc11" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>接近戦攻撃</td>
+                          <td>初期設定</td>
+                          <td>攻撃忍法</td>
+                          <td>自由</td>
+                          <td>1</td>
+                          <td>なし</td>
+                          <td>接近戦．攻撃が成功すると，目標に接近戦ダメージを１点与えることが出来る
+                            <br>通常の接近戦攻撃 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>威光(いこう)</td>
+                          <td>★★☆☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>自由</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを１点与えることが出来る．もし目標が忍者であり，かつ階級が自分よりも下だった場合更に接近戦ダメージを１点与えることが出来る
+                            <br>自信によって己を強くする忍法
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>交叉(こうさ)</td>
+                          <td>★★☆☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>刀術</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを２点与えることが出来る
+                            <br>通り過ぎざまの一瞬を狙って放つ斬撃
+                          </td>
+                        </tr>　
+                        <tr>
+                          <td>笹貫(ささぬき)</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>刀術</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>接近戦．この攻撃に対して回避判定を行う場合，回避判定の達成値がこの攻撃の命中判定の達成値以上にならないと回避判定は成功しない．攻撃が成功すると目標に接近戦ダメージを１点与えることが出来る
+                            <br>舞い落ちる笹を貫く静謐の一撃
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>天牛(かみきり)</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>怪力</td>
+                          <td>0</td>
+                          <td>4</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを１点与え，目標の持っているニングを１つ失わせることが出来る（どの忍具を失うかは攻撃された目標が決定できる）
+                            <br>力任せの攻撃で敵の装備ごとダメージを与える
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>毒手(どくしゅ)</td>
+                          <td>★★★☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>毒術</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを１点と「マヒ」の変調を与えることが出来る
+                            <br>毒の染み付いた爪による一撃
+                          </td>
+                        </tr>　
+                        <tr>
+                          <td>射撃戦攻撃</td>
+                          <td>★★☆☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>自由</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td>射撃戦．攻撃が成功すると目標に射撃戦ダメージを1点あたえることが出来る
+                            <br>通常の射撃戦攻撃
+                          </td>
+                        </tr>　
+                        <tr>
+                          <td>爆破(ばくは)</td>
+                          <td>★★★☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>火術</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>射撃戦．攻撃が成功すると目標に射撃戦ダメージを２点あたえることが出来る
+                            <br>間合いは狭いがダメージは大きい射撃戦攻撃
+                          </td>
+                        </tr>　
+                        <tr>
+                          <td>血汗(けっかん)</td>
+                          <td>★★★☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>火術</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>射撃戦．攻撃が成功すると目標に射撃戦ダメージを1点あたえることが出来る．もし，この忍法を使って間合いが０の目標を攻撃した場合，この攻撃の回避判定にはマイナス２の修正がつく
+                            <br>自らの血を刃や針のように飛ばして相手を攻撃する
+                          </td>
+                        </tr>　
+                        <tr>
+                          <td>鎌鼬(かまいたち)</td>
+                          <td>★★★☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>縄術</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>射撃戦．この攻撃の回避判定にはマイナス１の修正がつく．攻撃が成功すると目標に射撃戦ダメージを１点与えることが出来る
+                            <br>髪や糸，鞭などを用いて目に見えない攻撃を行う
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                  <div class="panel-group"></div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc12">サポート忍法 </a>
+                </h4>
+              </div>
+              <div id="acc12" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>毒飼（どくつかい）</td>
+                          <td>★★★☆☆</td>
+                          <td>サポート忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>1</td>
+                          <td>いつでも使用できる．生命力を１点減少する．自分の受けている変調をすべて回復する
+                            <br>特殊な毒を使用し，毒をもって毒を制す 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>連撃（れんげき）</td>
+                          <td>★★★★☆</td>
+                          <td>サポート忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>2</td>
+                          <td>自分の攻撃が回避された時に使用できる．もう一度同じ攻撃忍法を使って同じ目標に攻撃を行うことが出来る（追加の攻撃もコストは発生する）
+                            <br>無数に攻撃を放ち相手の防御をかいくぐる 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>六法（ろっぽう）</td>
+                          <td>★★☆☆☆</td>
+                          <td>サポート忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>2</td>
+                          <td>戦闘中自分が脱落した時に使用できる．指定特技の判定に成功すると自分以外の間合内のキャラクター全員に１点の射撃戦ダメージを与える
+                            <br>戦場より逃走する際に爆発を起こす 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc13">装備忍法 </a>
+                </h4>
+              </div>
+              <div id="acc13" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>頑健（がんけん）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>追加の生命力とそのスロットを二転獲得するダメージを受けた時追加のスロットから優先的に減少させること．
+                            <br>強い生命力を誇る 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>達人（たつじん）</td>
+                          <td>★★★★☆</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>この忍法を習得した時好きな自分の習得している特技を１つ選ぶ．その特技は生命力を失ってもその分野の特技が使用不能になっても使用できる
+                            <br>肉体に染み付いた特殊な技能を身につける 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>一休庵（ひとやすみのいおり）</td>
+                          <td>★★★★☆</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>自分が回復判定を行う時に使用できる．サイコロを振らず回復判定に自動的に成功することが出来る
+                            <br>心から休める拠点もしくは日常 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
           </div>
-      
-      <header class="jumbotron">
-      <div class="container">
-        <h1>Header を作る</h1>
-        <p>今回はBootrapでヘッダー画像の部分を作る。基本的なHTMLのひな形に、背景を指定するだけでそれっぽく作ることが可能。綺麗に見せるコツは背景の画像をどうのように使いこなすかによって大きく変わってきます。ボカシを与えると、遠近感の視覚効果を与えることが出来ます</p>
-        <p><a class="btn btn-lg midashi-btn" role="button">もっと詳しく &raquo;</a></p>
+        </div>
       </div>
-    </header>
-      
-    
-    <div class="container-fluid">
-      <h1>はじめてのBootstrap</h1>
-      <p>こんにちは、世界。</p>
-    <p id="test"><a href="javascript:;">idセレクタで指定をしています。ココをクリックすると文字が変更されます</a></p>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc2">斜歯忍軍</a>
+          </h4>
+        </div>
+        <div class="panel-body">斜歯忍軍の流派に所属する者が習得できる．応用性が広く様々な局面で活用できる</div>
+        <div id="acc2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc14">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc14" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>布砦（ぬのとりで）</td>
+                          <td>★★★★☆</td>
+                          <td>サポート忍法</td>
+                          <td>衣装術</td>
+                          <td>なし</td>
+                          <td>3</td>
+                          <td>誰かが自分に対して攻撃を行おうとしたときに使用できる．攻撃を行おうとしたものを目標に選ぶ．指定特技の判定に成功すると，目標の命中変亭のファンブル値を２上昇させることが出来る
+                            <br>まとった衣装を伸ばし相手にからませてその動きを封じる 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>魔界工学（まかいこうがく）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>誰かが自分に対して攻撃を行おうとしたときに使用できる．攻撃を行おうとしたものを目標に選ぶ．指定特技の判定に成功すると，目標の命中変亭のファンブル値を２上昇させることが出来る
+                            <br>まとった衣装を伸ばし相手にからませてその動きを封じる 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>土竜吼（どりゅうこう）</td>
+                          <td>★★★★★</td>
+                          <td>攻撃忍法</td>
+                          <td>掘削術</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを１点与え目標のいるプロット値に移動する．元々の自分のプロット値より低いプロット地の手番になった時，もう一度このラウンドに使用していない別の攻撃忍法を使用することが出来る（奥義は使用できない）
+                            <br>地を潜り，相手の四角から攻撃を繰り出す 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc3">鞍馬神流 </a>
+          </h4>
+        </div>
+        <div class="panel-body">鞍馬神流の流派に所属する者が習得できる．他流派に比べて攻撃力の高さを誇る</div>
+        <div id="acc3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <!--タブの始まり-->
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc16">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc16" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>後の先（ごのせん）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>自分よりプロット値が高いキャラクターへの攻撃が成功すると，通常の攻撃の効果に加え，射撃戦ダメージを１点与えることが出来る
+                            <br>相手の出方を待ってその隙きをつく 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>時雨（しぐれ）</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>砲術</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>射撃戦．間合い内の好きなキャラクターを二体まで目標にできる．攻撃が成功すると目標に射撃戦ダメージを１点与えることが出来る
+                            <br>乱れ打ち．銃や手裏剣を撃ちまくる 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>陽炎（かげろう）</td>
+                          <td>★★★★☆</td>
+                          <td>サポート忍法</td>
+                          <td>刀術</td>
+                          <td>なし</td>
+                          <td>1</td>
+                          <td>自分の命中判定の前に使用できる．指定特技の判定に成功したら，その攻撃の回避判定に－２の修正がつく
+                            <br>その刀身は陽炎の如くゆらめき，捉えるのは至難 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <!--タブのおわり-->
+          </div>
+        </div>
+      </div>
+      <!--    ハグレモノ始まり-->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc4">ハグレモノ </a>
+          </h4>
+        </div>
+        <div class="panel-body">ハグレモノの流派に所属する者が習得できる．機動力が高く遊撃的な忍法が多い</div>
+        <div id="acc4" class="panel-collapse collapse">
+          <div class="panel-body">
+            <!--タブの始まり-->
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc18">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc18" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>螺旋陣（らせんじん）</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>隠形術</td>
+                          <td>なし</td>
+                          <td>1</td>
+                          <td>接近戦．間合い内のキャラクターを好きなだけ選ぶ．そのキャラクター全員を目標にできる
+                            <br>螺旋を描くように攻撃を行い，自分の周囲にいるものにダメージを与える 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>金剛（こんごう）</td>
+                          <td>★★★★★</td>
+                          <td>サポート忍法</td>
+                          <td>生存術</td>
+                          <td>なし</td>
+                          <td>3</td>
+                          <td>自分が生命力を二点以上失った時に使用できる．指定特技の判定に成功すると減少する生命力の値を１点減少できる
+                            <br>己の肉体を金剛石の如く硬化させる忍法 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>刃隠（はがくれ）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>このキャラクターに対する命中判定が失敗したキャラクターは１店の射撃戦ダメージを受ける
+                            <br>自分の周囲にカミソリのように尖った葉っぱや花を舞わせ，近づくものを切り刻む 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <!--タブのおわり-->
+          </div>
+        </div>
+      </div>
+      <!--    ハグレモノ終わり-->
+      <!--    比良坂機関始まり-->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc5">比良坂機関 </a>
+          </h4>
+        </div>
+        <div class="panel-body">比良坂機関の流派に所属する者が習得できる．搦め手が多く情報戦に強い傾向がある</div>
+        <div id="acc5" class="panel-collapse collapse">
+          <div class="panel-body">
+            <!--タブの始まり-->
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc19">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc19" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>揺らし（ゆらし）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>自分が秘密を知っているキャラクターを攻撃するとき通常の攻撃の効果に加え，射撃戦ダメージを一点与えることが出来る
+                            <br>相手の弱みにつけこんで隙きをつくる 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>天眼（てんがん）</td>
+                          <td>★★★★☆</td>
+                          <td>サポート忍法</td>
+                          <td>対人術</td>
+                          <td>なし</td>
+                          <td>２</td>
+                          <td>自分の忍法によって誰かにダメージを与えたときに使用できる．ダメージを与えたキャラクター一人を目標に選ぶ．指定特技の判定に成功すると，目標の秘密か居所を獲得できる
+                            <br>傷を通じてその人物と因縁を結び，その心の中や居場所を調査する 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>大祓（おおはらえ）</td>
+                          <td>★★★☆☆</td>
+                          <td>攻撃忍法</td>
+                          <td>流言の術</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>集団戦．間合い内の好きなキャラクター二体を目標にできる．攻撃が成功すると目標に集団戦ダメージ１点を与えることができる
+                            <br>比良坂機関員による悪を祓う戦闘儀式 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <!--タブのおわり-->
+          </div>
+        </div>
+      </div>
+      <!--    比良坂機関終わり-->
+      <!--    私立卸斎学園始まり-->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc6">私立卸斎学園 </a>
+          </h4>
+        </div>
+        <div class="panel-body">私立卸斎学園の流派に所属する者が習得できる．トリッキーな忍法が多いのが特徴</div>
+        <div id="acc6" class="panel-collapse collapse">
+          <div class="panel-body">
+            <!--タブの始まり-->
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc20">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc20" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>早乙女（さおとめ）</td>
+                          <td>★★★★☆</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>自分が居所を知っているキャラクターへの自分の攻撃が成功すると，通常の効果に加え，射撃戦ダメージを１点与えることができる
+                            <br>敵の居場所を調べその戦法や声質を分析する 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>伏兵（ふくへい）</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>用兵術</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>集団戦．この攻撃の回避判定にはマイナス２の修正がつく．攻撃が成功すると目標に集団戦ダメージを１点与えることができる
+                            <br>思わぬ伏兵を配置し，敵を動揺させる 
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>破軍（はぐん）</td>
+                          <td>★★★★★</td>
+                          <td>サポート忍法</td>
+                          <td>人脈</td>
+                          <td>なし</td>
+                          <td>２</td>
+                          <td>戦闘中，誰かが判定を行う前に使用できる．判定を行おとするものを目標に選ぶ．指定特技の判定に成功するとそのラウンドの間，目標は行為判定のサイコロの目が，この忍法の使用者のプロット値以下だとファンブルするようになる
+                            <br>級友の助けをかり，相手を死地においやる 
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <!--タブのおわり-->
+          </div>
+        </div>
+      </div>
+      <!--    私立卸斎学園終わり-->
+      <!--    隠忍の血統始まり-->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#acc7">隠忍の血統</a>
+          </h4>
+        </div>
+        <div class="panel-body">隠忍の血統の流派に所属する者が習得できる．強力だが癖の強い忍法が多い</div>
+        <div id="acc7" class="panel-collapse collapse">
+          <div class="panel-body">
+            <!--タブの始まり-->
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#acc21">流派忍法 </a>
+                </h4>
+              </div>
+              <div id="acc21" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <!-- Table -->
+                  <div class="table-responsive">
+                    <table class="table_ninjuthu table-striped table-bordered table-hover table3">
+                      <thead>
+                        <tr>
+                          <th class="table-th1">忍術名</th>
+                          <th class="table-th2">おすすめ度</th>
+                          <th>タイプ</th>
+                          <th>指定特技</th>
+                          <th>間合</th>
+                          <th>コスト</th>
+                          <th class="table-th3">説明</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table_title">
+                        <tr >
+                          <td>鬼影（おにかげ）</td>
+                          <td>★★★★★</td>
+                          <td>装備忍法</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>なし</td>
+                          <td>このキャラクターに対する命中判定は－２の修正がつく
+                            <br>霧や影のごとくとらえどころのない姿に変じる
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>血旋渦（けっせんか）</td>
+                          <td>★★★★☆</td>
+                          <td>攻撃忍法</td>
+                          <td>異形化</td>
+                          <td>3</td>
+                          <td>1</td>
+                          <td>接近戦．攻撃が成功すると目標に接近戦ダメージを１点与えることができる
+                            <br>自分の血や肉体の一部を変化させそれで攻撃をおこなう
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>吸精（きゅうせい）</td>
+                          <td>★★★★☆</td>
+                          <td>サポート忍法</td>
+                          <td>死霊術</td>
+                          <td>なし</td>
+                          <td>1</td>
+                          <td>自分の攻撃が成功し，目標にダメージを与えた時に使用できる．指定特技の判定に成功すると自分の生命力を１点回復できる
+                            <br>相手から命を搾り取る
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--/table-responsive-->
+                </div>
+              </div>
+            </div>
+            <!--タブのおわり-->
+          </div>
+        </div>
+      </div>
+      <!--    隠忍の血統終わり-->
     </div>
+    <!--/panel-->
+    <!--一覧終わり -->
   </body>
 </html>
