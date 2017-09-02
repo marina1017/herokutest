@@ -4,16 +4,35 @@ body {
      font-family: 'Noto Sans JP', sans-serif;
      font-size: 120%;
     　font-weight:200;
+    
 }
 h1{
 font-size:40px;
 color: white;
 background-color: #000000;  
 }
-table {
-width: 80%;
+table.table2 {
+width: 100%;
 table-layout: fixed;
 }
+
+table.table3 {
+width: 100%;
+table-layout: auto;
+font-size: 120%;
+}
+
+tbody.table_title {
+    font-size: 100%;
+    font-weight:300;
+}
+.panel-group {
+    width: 90%;
+    margin: auto;
+}
+
+
+
 table th.title {
    width: 1.8em;   /* セルの横幅：1.8文字分 */
 }
@@ -58,4 +77,39 @@ header.jumbotron {
     .navbar-form {
       padding-right: 30px;
     }
+
+
+.table-th1 {
+    width: 10%;
+}
+
+.table-th2 {
+    width: 10%;
+}
+
+.table-th3 {
+    width: 50%;
+}
+/*index1*/
+.mySlider1 {
+    width: 90%;
+    margin: auto;
+    
+}
+.school {
+    width: 90%;
+    display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.body1 {
+    background-color: black;
+}
+/*index2*/
+.table-responsive {
+    width: 90%;
+    margin: auto;
+}
+
 
