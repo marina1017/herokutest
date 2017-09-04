@@ -92,12 +92,12 @@ header.jumbotron {
 }
 /*index1*/
 .mySlider1 {
-    width: 90%;
+    width: 80%;
     margin: auto;
     
 }
 .school {
-    width: 90%;
+    width: 70%;
     display: block;
  margin-left: auto;
  margin-right: auto;
@@ -110,6 +110,12 @@ header.jumbotron {
 .table-responsive {
     width: 90%;
     margin: auto;
+}
+
+.setting {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
